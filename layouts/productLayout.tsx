@@ -9,6 +9,8 @@ export function ProductLayout({
   drones,
   harvests,
   biologics,
+  texts,
+  images,
 }: ProductLayout.Props) {
   return (
     <div className="">
@@ -21,16 +23,10 @@ export function ProductLayout({
           <div className="w-full h-full col-span-2">
             <div className="flex flex-col justify-center gap-4 w-full py-16 bg-[#efefef] pl-20 pr-20">
               <div className="">
-                <p className="text-black">
-                  É um parasita em massa e liberador de ovos, usado
-                  principalmente para o controle de pragas. Com ele é possível
-                  lançar insumos biológicos como Trichogramma, Telenomus e
-                  Chrysopa (todos testados e em operação comercial com DRONES no
-                  Brasil, Colômbia e América Central).
-                </p>
+                <p className="text-black">{texts[0]}</p>
               </div>
               <div className="flex justify-center w-full ">
-                <img src="drone.jpeg" />
+                <img src={images[0]} />
               </div>
               <div className="flex flex-col gap-3">
                 <h2 className="text-2xl text-[#ef7622] ">Destaques</h2>
@@ -88,10 +84,8 @@ export function ProductLayout({
             <div className="flex flex-col items-center justify-centerw-full py-20 bg-[#efefef] pl-20 pr-20 pt-7 gap-6 relative">
               <div className="absolute top-0 right-[ calc(50% - 5rem)] w-20 h-4 rounded-full bg-[#1d4f90] mt-2"></div>
 
-              <h2 className="text-3xl  text-[#1d4f90]">
-                Como Funciona o bioBOT ?
-              </h2>
-              <img src="drone.jpeg" />
+              <h2 className="text-3xl  text-[#1d4f90]">{texts[1]}</h2>
+              <img src={images[1]} />
             </div>
           </div>
           <div className="flex flex-col justify-center items-center bg-[#efefef] h-full w-full col-auto"></div>
@@ -108,5 +102,7 @@ export namespace ProductLayout {
     drones: CardHashMap;
     harvests: CardHashMap;
     biologics: CardHashMap;
+    texts: string[];
+    images: string[];
   };
 }

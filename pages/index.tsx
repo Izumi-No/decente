@@ -4,6 +4,7 @@ import {
   droneMock,
   featuresMock,
   harvestMock,
+  page,
 } from "@/mocks/productMock.ts";
 
 export default function Home() {
@@ -13,6 +14,8 @@ export default function Home() {
       drones={droneMock}
       features={featuresMock}
       harvests={harvestMock}
+      images={page.images}
+      texts={page.texts}
     />
   );
 }
