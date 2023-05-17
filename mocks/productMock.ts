@@ -115,3 +115,27 @@ export const page = {
   ],
   images: ["drone.jpeg", "drone.jpeg"],
 };
+
+export type feature = {
+  id: number;
+  description: string;
+  image: string;
+};
+
+export type input = {
+  id: number;
+  name: string;
+  image: string;
+};
+
+export type product = {
+  id: number;
+  name: string;
+  subtitle: string;
+  image?: string;
+  description: string;
+  price: number;
+  cultivation: number;
+  inputs: input[];
+  features: feature[];
+};
