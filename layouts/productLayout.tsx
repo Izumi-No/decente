@@ -13,7 +13,7 @@ export function ProductLayout({
   images,
 }: ProductLayout.Props) {
   return (
-    <div className="">
+    <div>
       <div className="flex flex-col justify-center w-full h-20 bg-[#1d4f90] pl-20">
         <h1 className="text-xl">bioBOT</h1>
         <p className="text-sm text-blue-300">Liberador de insumos biológicos</p>
@@ -81,17 +81,16 @@ export function ProductLayout({
                 ))}
               </div>
             </div>
-            <div className="flex flex-col items-center justify-centerw-full py-20 bg-[#efefef] pl-20 pr-20 pt-7 gap-6 relative">
-              <div className="absolute top-0 right-[ calc(50% - 5rem)] w-20 h-4 rounded-full bg-[#1d4f90] mt-2"></div>
-
-              <h2 className="text-3xl  text-[#1d4f90]">{texts[1]}</h2>
-              <img src={images[1]} />
-            </div>
           </div>
           <div className="flex flex-col justify-center items-center bg-[#efefef] h-full w-full col-auto"></div>
         </div>
       </div>
-      <div className="w-full h-[50vh] bg-[#1d4f90]"></div>
+      <div className="flex flex-col items-center justify-centerw-full py-20 bg-[#efefef] pl-20 pr-20 pt-7 gap-6 relative">
+        <div className="absolute top-0 right-[ calc(50% - 5rem)] w-20 h-4 rounded-full bg-[#1d4f90] mt-2"></div>
+
+        <h2 className="text-3xl  text-[#1d4f90]">{texts[1]}</h2>
+        <img src={images[1]} />
+      </div>
     </div>
   );
 }
