@@ -3,6 +3,7 @@ import { BiologicCard } from "../components/BiologicCard.tsx";
 import { DroneCard } from "../components/DroneCard.tsx";
 import { Feature } from "../components/Feature.tsx";
 import { CardHashMap } from "@/types/cardHashMap.ts";
+import CartCard from "@/components/cartCards.tsx";
 
 export function ProductLayout({
   features,
@@ -81,15 +82,30 @@ export function ProductLayout({
                 ))}
               </div>
             </div>
-          </div>
-          <div className="flex flex-col justify-center items-center bg-[#efefef] h-full w-full col-auto"></div>
-        </div>
-      </div>
-      <div className="flex flex-col items-center justify-centerw-full py-20 bg-[#efefef] pl-20 pr-20 pt-7 gap-6 relative">
-        <div className="absolute top-0 right-[ calc(50% - 5rem)] w-20 h-4 rounded-full bg-[#1d4f90] mt-2"></div>
+            <div className="flex flex-col items-center justify-center w-full py-20 bg-[#efefef] pl-20 pr-20 pt-7 gap-6 relative">
+              <div className="absolute top-0 right-[ calc(50% - 5rem) ] w-20 h-4 rounded-full bg-[#1d4f90] mt-2"></div>
 
-        <h2 className="text-3xl  text-[#1d4f90]">{texts[1]}</h2>
-        <img src={images[1]} />
+              <h2 className="text-3xl  text-[#1d4f90]">{texts[1]}</h2>
+              <img src={images[1]} />
+            </div>
+          </div>
+          <div className="flex flex-col  items-center bg-[#efefef] px-16 pt-8 h-full w-full col-auto">
+            <div className="flex flex-col items-center sticky top-4 w-full   h-[750px] ">
+              <div>
+                <h2 className="text-md text-600 text-black">
+                  Incluídos por padrão:
+                </h2>
+                <div className="flex flex-col items-center justify-center">
+                  <CartCard>BioCot</CartCard>
+                  <span className="text-black/50">+</span>
+                  <CartCard>BioCot</CartCard>
+                </div>
+              </div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
